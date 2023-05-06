@@ -1,0 +1,16 @@
+{% load static %}
+<h1> Available books </h1>
+
+<a href = "/addbook"><button> Add Book </button></a>
+
+<br>
+{%for book in books%}
+    Title : {{book.title}} <br>
+    Author : {{book.author}} <br>
+    Publishe : {{book.publisher}} <br>
+    Publication Date : {{book.publication_date}} <br>
+    ISBN : {{book.isbn}} <br>
+    Category : {{book.category}} <br>
+    <a href='deletebook/{{book.id}}'><button> Delete </button></a> <br>
+    ------------------------------------------------ <br>
+{%endfor%}
